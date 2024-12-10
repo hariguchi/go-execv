@@ -15,7 +15,7 @@ func TestCmd(t *testing.T) {
 	fn := utils.FuncName(false)
 
 	// "ls /"
-	cmd := New([]string{"ls", "/"})
+	cmd := NewCmd([]string{"ls", "/"})
 	if cmd == nil {
 		t.Fatalf("%s: failed to instantiate a command\n", fn)
 	}
@@ -29,7 +29,7 @@ func TestCmd(t *testing.T) {
 	fmt.Printf("--------\n")
 
 	// "mkdir /foo": this must fail without sudo
-	cmd = New([]string{"mkdir", "/foo"})
+	cmd = NewCmd([]string{"mkdir", "/foo"})
 	if cmd == nil {
 		t.Fatalf("%s: failed to instantiate a command\n", fn)
 	}

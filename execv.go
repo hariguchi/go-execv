@@ -38,7 +38,7 @@ type Cmd struct {
 	stderr bytes.Buffer
 }
 
-func New(args []string) *Cmd {
+func NewCmd(args []string) *Cmd {
 	if len(args) <= 0 {
 		return nil
 	}
